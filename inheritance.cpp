@@ -68,12 +68,28 @@ int main()
 	cin >> ch.name;
 	cout << "Please enter Child age : " << endl;
 	cin >> ch.age;
+	if (ch.age >= gf.age)
+	{
+		do {
+			cout << "Your age can not great than your father" << endl;
+			cout << "Please enter Child age : " << endl;
+			cin >> ch.age;
+		} while (ch.age >= gf.age);
+	}
 	cout << "Please enter Child eyecolor : " << endl;
 	cin >> ch.eyecolor;
 	cout << "Please enter Grandchild name : " << endl;
 	cin >> gch.name;
 	cout << "Please enter Grandchild age : " << endl;
 	cin >> gch.age;
+	if (gch.age >= ch.age)
+	{
+		do {
+			cout << "Your age can not great your father" << endl;
+			cout << "Please enter Grandchild age : " << endl;
+			cin >> gch.age;
+		} while (gch.age >= ch.age);
+	}
 	cout << endl;
 	cout << endl;
 	gf.All();
